@@ -2,7 +2,7 @@
   "name": "zokrates-js",
   "main": "index.js",
   "author": "Darko Macesic <darem966@gmail.com>, Edi Sinovcic <edi@blockchain-it.hr>",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "keywords": [
     "zokrates",
     "wasm-bindgen",
@@ -15,6 +15,10 @@
     "pkg",
     "lib"
   ],
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/blockchain-it-hr/zokrates-js"
+  },
   "types": "lib/index.d.ts",
   "scripts": {
     "cargo:build": "cargo build --target=wasm32-unknown-unknown",

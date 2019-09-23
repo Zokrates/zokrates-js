@@ -24,7 +24,7 @@ function importResolver(location, path) {
 
 zokrates.initialize(importResolver).then(() => {
     // we have to initialize wasm module before calling api functions
-    zokrates.compile("def main() -> (): return")
+    zokrates.compile("def main() -> (): return", "main")
 });
 ```
 
