@@ -1,6 +1,6 @@
 /*!
  * zokrates-js
- * Copyright(c) 2019 Darko Macesic, Edi Sinovcic
+ * Copyright (c) 2019 Darko Macesic, Edi Sinovcic
  */
 
 'use strict';
