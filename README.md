@@ -10,6 +10,16 @@ npm install zokrates-js
 
 For nodejs support, check this [repository](https://github.com/blockchain-it-hr/zokrates-js-node).
 
+## API
+| Function | Signature |
+| ------ | ------ |
+| initialize | initialize(callback: (location: string, path: string) => ResolverResult): Promise\<void\> |
+| compile | compile(source: string, location: string): Uint8Array |
+| computeWitness | computeWitness(program: Uint8Array, args: string[]): string |
+| setup | setup(program: Uint8Array): [string, Uint8Array] |
+| exportSolidityVerifier | exportSolidityVerifier(verifyingKey: string, isAbiv2: boolean): string |
+| generateProof | generateProof(program: Uint8Array, witness: string, provingKey: Uint8Array): string |
+
 ### Usage
 ```js
 import * as zokrates from 'zokrates-js'
