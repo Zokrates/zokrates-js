@@ -31,6 +31,7 @@
     "gulp": "^4.0.2",
     "gulp-cli": "^2.2.0",
     "rimraf": "^3.0.0",
+    "serve": "^11.2.0",
     "text-encoding": "^0.7.0"
   },
   "dependencies": {}
