@@ -13,7 +13,6 @@ workflows:
   build:
     jobs:
       - build:
-          context: zokrates
           filters:
             branches:
               only: master
