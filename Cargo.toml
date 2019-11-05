@@ -17,7 +17,7 @@ bincode = "1.1.4"
 wasm-bindgen = { version = "0.2.46", features = ["serde-serialize"] }
 zokrates_core = { git = "https://github.com/dark64/ZoKrates", branch = "wasm-friendly", default-features = false, features = ["wasm"] }
 zokrates_field = { git = "https://github.com/dark64/ZoKrates", branch = "wasm-friendly" }
-zokrates_abi = { git = "https://github.com/dark64/ZoKrates", branch = "wasm-friendly" }
+zokrates_abi = { git = "https://github.com/dark64/ZoKrates", branch = "wasm-friendly", default-features = false, features = ["wasm"] }
 
 [target."cfg(debug_assertions)".dependencies]
 console_error_panic_hook = "0.1.5"
