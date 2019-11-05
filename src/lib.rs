@@ -89,13 +89,13 @@ pub fn compute_witness(program: JsValue, args: JsValue) -> Result<JsValue, JsVal
 #[wasm_bindgen]
 pub fn setup(program: JsValue) -> JsValue {
     let program_flattened = deserialize_program(&program);
-    let proof = proof_system::G16{}.setup_c(program_flattened);
+    let proof = proof_system::G16{}.setup(program_flattened);
     JsValue::from_serde(&proof).unwrap()
 }
 
 #[wasm_bindgen]
 pub fn export_solidity_verifier(vk: JsValue, is_abiv2: JsValue) -> JsValue {
-    let verifier = proof_system::G16{}.export_solidity_verifier_c(
+    let verifier = proof_system::G16{}.export_solidity_verifier(
         vk.as_string().unwrap(), 
         is_abiv2.as_bool().unwrap()
     );
@@ -105,13 +105,11 @@ pub fn export_solidity_verifier(vk: JsValue, is_abiv2: JsValue) -> JsValue {
 #[wasm_bindgen]
 pub fn generate_proof(program: JsValue, witness: JsValue, pk: JsValue) -> JsValue {
     let program_flattened = deserialize_program(&program);
-
     let str_witness: String = witness.as_string().unwrap();
     let witness_out: ir::Witness<FieldPrime> = ir::Witness::read(str_witness.as_bytes()).unwrap();
-        
     let mut proving_key: Vec<u8> = pk.into_serde().unwrap();
 
-    let proof: String = proof_system::G16{}.generate_proof_c(program_flattened, witness_out, proving_key.as_mut_slice());
+    let proof: String = proof_system::G16{}.generate_proof(program_flattened, witness_out, proving_key.as_mut_slice());
     JsValue::from_str(proof.as_str())
 }
 
