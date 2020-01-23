@@ -1,3 +1,5 @@
+# DEPRECATED
+
 # zokrates-js
 JavaScript bindings for [ZoKrates](https://github.com/Zokrates/ZoKrates) project. The goal of this project is to provide ZoKrates JavaScript API supporting both node.js and the web. ZoKrates is a toolbox for zkSNARKs on Ethereum. It helps you use verifiable computation in your DApp, from the specification of your program in a high level language to generating proofs of computation to verifying those proofs in Solidity.
 
